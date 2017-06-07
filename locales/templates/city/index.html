@@ -1,0 +1,7 @@
+{% if cities %}
+<ul>
+{% for city in cities %}
+	<li><a href="{% url 'city_show' city.id %}">{{ city.name }}</a></li>
+</ul>
+{% endfor %}
+{% endif %}

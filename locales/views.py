@@ -10,13 +10,12 @@ from .models import City, Neighborhood
 
 def cities(request):
 	cities = get_list_or_404(City)[:5]
-	context = {'cities': cities}
-	return render(request, 'cities/index.html', context)
+	return render(request, 'city/index.html', {'cities':cities})
 
 
 def city_show(request, city_id):
 	city = get_object_or_404(City, pk=city_id)
-	return render(request, 'cities/show.html', {'city':city})
+	return render(request, 'city/show.html', {'city':city})
 
 
 def neighborhoods(request):

@@ -1,0 +1,7 @@
+{% if neighborhoods %}
+<ul>
+{% for neighborhood in neighborhoods %}
+	<li><a href="{% url 'neighborhood_show' neighborhood.id %}">{{ neighborhood.name }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
